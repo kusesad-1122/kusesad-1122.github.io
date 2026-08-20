@@ -682,9 +682,13 @@
 
       /* ---------- Workflow ---------- */
       .workflow-cell {
-        transition: background-color 0.3s ease;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
       }
-      .workflow-cell:hover { background: color-mix(in srgb, var(--brand-500) 4%, var(--background-50)); }
+      .workflow-cell:hover {
+        transform: translateY(-4px);
+        border-color: color-mix(in srgb, var(--brand-500) 45%, transparent);
+        box-shadow: 0 16px 48px -16px color-mix(in srgb, var(--brand-500) 20%, transparent);
+      }
       .workflow-cell .step {
         position: relative;
         transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s ease;
